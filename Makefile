@@ -214,39 +214,39 @@ $(buildbin):
 	go build -o $(dir $@) -ldflags "$(LDFLAGS)" ./cmd/telegraf
 
 debs := telegraf_$(deb_version)_amd64.deb
-debs += telegraf_$(deb_version)_arm64.deb
-debs += telegraf_$(deb_version)_armel.deb
-debs += telegraf_$(deb_version)_armhf.deb
-debs += telegraf_$(deb_version)_i386.deb
-debs += telegraf_$(deb_version)_mips.deb
-debs += telegraf_$(deb_version)_mipsel.deb
-debs += telegraf_$(deb_version)_s390x.deb
-debs += telegraf_$(deb_version)_ppc64el.deb
+#debs += telegraf_$(deb_version)_arm64.deb
+#debs += telegraf_$(deb_version)_armel.deb
+#debs += telegraf_$(deb_version)_armhf.deb
+#debs += telegraf_$(deb_version)_i386.deb
+#debs += telegraf_$(deb_version)_mips.deb
+#debs += telegraf_$(deb_version)_mipsel.deb
+#debs += telegraf_$(deb_version)_s390x.deb
+#debs += telegraf_$(deb_version)_ppc64el.deb
 
-rpms += telegraf-$(rpm_version).aarch64.rpm
-rpms += telegraf-$(rpm_version).armel.rpm
-rpms += telegraf-$(rpm_version).armv6hl.rpm
-rpms += telegraf-$(rpm_version).i386.rpm
-rpms += telegraf-$(rpm_version).s390x.rpm
-rpms += telegraf-$(rpm_version).ppc64le.rpm
+#rpms += telegraf-$(rpm_version).aarch64.rpm
+#rpms += telegraf-$(rpm_version).armel.rpm
+#rpms += telegraf-$(rpm_version).armv6hl.rpm
+#rpms += telegraf-$(rpm_version).i386.rpm
+#rpms += telegraf-$(rpm_version).s390x.rpm
+#rpms += telegraf-$(rpm_version).ppc64le.rpm
 rpms += telegraf-$(rpm_version).x86_64.rpm
 
-tars += telegraf-$(tar_version)_darwin_amd64.tar.gz
-tars += telegraf-$(tar_version)_freebsd_amd64.tar.gz
-tars += telegraf-$(tar_version)_freebsd_i386.tar.gz
+#tars += telegraf-$(tar_version)_darwin_amd64.tar.gz
+#tars += telegraf-$(tar_version)_freebsd_amd64.tar.gz
+#tars += telegraf-$(tar_version)_freebsd_i386.tar.gz
 tars += telegraf-$(tar_version)_linux_amd64.tar.gz
-tars += telegraf-$(tar_version)_linux_arm64.tar.gz
-tars += telegraf-$(tar_version)_linux_armel.tar.gz
-tars += telegraf-$(tar_version)_linux_armhf.tar.gz
-tars += telegraf-$(tar_version)_linux_i386.tar.gz
-tars += telegraf-$(tar_version)_linux_mips.tar.gz
-tars += telegraf-$(tar_version)_linux_mipsel.tar.gz
-tars += telegraf-$(tar_version)_linux_s390x.tar.gz
-tars += telegraf-$(tar_version)_linux_ppc64le.tar.gz
-tars += telegraf-$(tar_version)_static_linux_amd64.tar.gz
+#tars += telegraf-$(tar_version)_linux_arm64.tar.gz
+#tars += telegraf-$(tar_version)_linux_armel.tar.gz
+#tars += telegraf-$(tar_version)_linux_armhf.tar.gz
+#tars += telegraf-$(tar_version)_linux_i386.tar.gz
+#tars += telegraf-$(tar_version)_linux_mips.tar.gz
+#tars += telegraf-$(tar_version)_linux_mipsel.tar.gz
+#tars += telegraf-$(tar_version)_linux_s390x.tar.gz
+#tars += telegraf-$(tar_version)_linux_ppc64le.tar.gz
+#tars += telegraf-$(tar_version)_static_linux_amd64.tar.gz
 
 zips += telegraf-$(tar_version)_windows_amd64.zip
-zips += telegraf-$(tar_version)_windows_i386.zip
+#zips += telegraf-$(tar_version)_windows_i386.zip
 
 dists := $(debs) $(rpms) $(tars) $(zips)
 
