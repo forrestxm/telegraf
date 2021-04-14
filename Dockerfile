@@ -2,7 +2,7 @@ FROM 10.225.108.70:9443/proxy/golang:1.16.2-buster as builder
 WORKDIR /go/src/github.com/influxdata/telegraf
 
 COPY . /go/src/github.com/influxdata/telegraf
-RUN CGO_ENABLED=0 make go-install
+RUN CGO_ENABLED=0 make deps telegraf go-install
 
 FROM 10.225.108.70:9443/proxy/alpine:3.13.3
 RUN echo 'hosts: files dns' >> /etc/nsswitch.conf
