@@ -104,7 +104,7 @@ func (pstore *PowerStore) Gather(acc telegraf.Accumulator) error {
 	if err != nil {
 		panic(err)
 	}
-	pstore.Log.Info("Appliance capacity is %d", capacity)
+	pstore.Log.Infof("Appliance capacity is %d", capacity)
 
 	var resp []ApplianceMetrics
 	client := c.APIClient()
@@ -132,7 +132,7 @@ func (pstore *PowerStore) Gather(acc telegraf.Accumulator) error {
 	fields := make(map[string]interface{})
 
 	if len(resp) > 0 {
-		pstore.Log.Info("Found %d records for space_metrics_by_appliance", len(resp))
+		pstore.Log.Infof("Found %d records for space_metrics_by_appliance", len(resp))
 		for _, ametric := range resp {
 
 			fields["physical_total"] = ametric.PhysicalTotal
